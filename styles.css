@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Barbie-font';
+    src: url('fonts/Barbie.otf') format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #FFD1DC;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/**NAVIGATION BAR**/
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 60px;
+    padding: 0px 10px 0px 20px;
+    align-items: center;
+    border-color: #fc87be;
+    border-left-style: solid;
+    border-left-width: 7px;
+}
+
+.logoImg {
+    height: 100%;
+    width: auto;
+    max-height: 50px;
+}
+
+.nav {
+    font-family: 'Barbie-font', sans-serif;
+    font-style: normal;
+    display: block;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.navItems_Left,
+.navItems_Right {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+/**FIRST SECTION**/
+.firstSection {
+    background: #e600001c;
+    width: 90%;
+    justify-self: center;
+    height: 80vh;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftContainer {
+    height: 90%;
+    width: 40%;
+    margin: 0 2em;
+    background: #0000004a;
+    border-radius: 0px 0px 70px 0px;
+}
+
+.rightContainer {
+    height: 90%;
+    width: 40%;
+    margin: 0 2em;
+    background: #0000004a;
+}
