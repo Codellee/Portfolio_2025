@@ -1,6 +1,8 @@
+/**MAIN**/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -14,39 +16,24 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: #FFD1DC;
+    background-color: #FFD1DC;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
 
 /**NAVIGATION BAR**/
 .navBar {
     display: flex;
     justify-content: space-between;
-    width: auto;
-    height: 60px;
-    padding: 0px 10px 0px 20px;
+    width: 100vw;
+    height: 13vh;
     align-items: center;
-    border-color: #fc87be;
-    border-left-style: solid;
-    border-left-width: 7px;
-}
-
-.logoImg {
-    height: 100%;
-    width: auto;
-    max-height: 50px;
-}
-
-.nav {
-    font-family: 'Barbie-font', sans-serif;
-    font-style: normal;
-    display: block;
-    font-size: 18px;
-    margin: 0 10px;
+    top: 0;
+    left: 0;
+    justify-items: center;
+    letter-spacing: 3px;
+    background-color:rgba(255, 255, 255, 0.549);
+    box-shadow: 0px 0px 5px 1px rgba(164, 11, 113, 0.433);
+    border-radius: 0px 0px 25px 0px;
 }
 
 .navItems_Left,
@@ -56,10 +43,43 @@ a {
     justify-items: center;
 }
 
+.navItems_Right {
+    margin-right: 2em;
+}
+
+/**NAVIGATION ITEMS**/
+.logoImg {
+    height: 100%;
+    width: auto;
+    max-height: 50px;
+    margin-left: 2em;
+    filter: drop-shadow(1px 1px 20px rgb(181, 85, 130));
+}
+
+.home,
+.rfirstItem,
+.rsecondItem,
+.rthirdItem {
+    font-family: 'Barbie-font', sans-serif;
+    font-style: normal;
+    display: block;
+    font-size: 15px;
+    margin: 0 25px;
+}
+
+.home {
+    font-size: 22px;
+}
+
+.navItems_Right a,
+.navItems_Left a {
+    color: #ec6f8c;
+    text-decoration: none;
+    font-weight: 900;
+}
 
 /**FIRST SECTION**/
 .firstSection {
-    background: #e600001c;
     width: 90%;
     justify-self: center;
     height: 80vh;
@@ -69,17 +89,48 @@ a {
     align-items: center;
 }
 
+/*****CARDS*******/
 .leftContainer {
     height: 90%;
-    width: 40%;
-    margin: 0 2em;
-    background: #0000004a;
-    border-radius: 0px 0px 70px 0px;
+    width: 35vw;
+    margin-left: 7em;
+    background: #ffffffdc;
+    border-radius: 10px;
+    padding: 40px 20px;
+     box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.122);
 }
 
 .rightContainer {
     height: 90%;
     width: 40%;
-    margin: 0 2em;
-    background: #0000004a;
+    margin-right: 4em;
+
+}
+
+.cardImage {
+    height: 100%;
+    width: 100%;
+    max-height: 120vh;
+    align-self: center;
+    object-fit: contain;
+}
+
+.leftContainer h1 {
+    font-family: 'Barbie-font';
+    color: #ec6f8c;
+    font-size: 35px;
+}
+
+.float{
+    position: fixed;
+    height: 10vh;
+    width: auto;
+bottom: 3vh;
+right: 3vh;
+}
+.float img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+    transform: scaleX(-1);
 }
