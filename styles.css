@@ -16,27 +16,28 @@
     font-family: 'Bright';
     src: url('fonts/Bright-Aura.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;  
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Fluppy';
     src: url('fonts/Atop-R99O3.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;  
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Renitah';
     src: url('fonts/Renitah.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;  
+    font-style: normal;
 }
 
 body {
     width: 100vw;
     height: 100vh;
     background-color: #FFD1DC;
+    overflow-x: hidden;
 }
 
 
@@ -131,10 +132,23 @@ body {
     object-fit: contain;
 }
 
-
 .left-container-title {
     position: absolute;
     margin: 30px 10px;
+}
+
+.content-container {
+    height: auto;
+    padding: 15px 5px;
+    width: 35vw;
+}
+
+.content-container p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Bright';
+    color: black;
+    line-height: 30px;
 }
 
 .left-container-title h1 {
@@ -144,6 +158,22 @@ body {
     font-weight: 1000;
     letter-spacing: 2px;
 }
+
+.left-image-container {
+    height: 15vh;
+    justify-self: end;
+    transform: translateX(-10px);
+    position: absolute;
+}
+
+.left-image-container img {
+    object-fit: contain;
+    height: 15vh;
+    width: auto;
+    transform: translateY(-10px);
+
+}
+
 .float {
     position: fixed;
     height: 10vh;
