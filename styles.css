@@ -8,9 +8,29 @@
 @font-face {
     font-family: 'Barbie-font';
     src: url('fonts/Barbie.otf') format('opentype');
-
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bright';
+    src: url('fonts/Bright-Aura.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: 'Fluppy';
+    src: url('fonts/Atop-R99O3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: 'Renitah';
+    src: url('fonts/Renitah.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;  
 }
 
 body {
@@ -31,19 +51,19 @@ body {
     left: 0;
     justify-items: center;
     letter-spacing: 3px;
-    background-color:rgba(255, 255, 255, 0.549);
+    background-color: rgba(255, 255, 255, 0.549);
     box-shadow: 0px 0px 5px 1px rgba(164, 11, 113, 0.433);
     border-radius: 0px 0px 25px 0px;
 }
 
-.navItems_Left,
-.navItems_Right {
+.left-nav-items,
+.right-nav-items {
     display: flex;
     align-items: center;
     justify-items: center;
 }
 
-.navItems_Right {
+.right-nav-items {
     margin-right: 2em;
 }
 
@@ -57,10 +77,10 @@ body {
 }
 
 .home,
-.rfirstItem,
-.rsecondItem,
-.rthirdItem {
-    font-family: 'Barbie-font', sans-serif;
+.nav-first-item,
+.nav-snd-item,
+.nav-third-item {
+    font-family: 'Bright', sans-serif;
     font-style: normal;
     display: block;
     font-size: 15px;
@@ -71,8 +91,8 @@ body {
     font-size: 22px;
 }
 
-.navItems_Right a,
-.navItems_Left a {
+.left-nav-items a,
+.right-nav-items a {
     color: #ec6f8c;
     text-decoration: none;
     font-weight: 900;
@@ -91,13 +111,9 @@ body {
 
 /*****CARDS*******/
 .leftContainer {
-    height: 90%;
+    height: 60%;
     width: 35vw;
     margin-left: 7em;
-    background: #ffffffdc;
-    border-radius: 10px;
-    padding: 40px 20px;
-     box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.122);
 }
 
 .rightContainer {
@@ -115,20 +131,28 @@ body {
     object-fit: contain;
 }
 
-.leftContainer h1 {
-    font-family: 'Barbie-font';
-    color: #ec6f8c;
-    font-size: 35px;
+
+.left-container-title {
+    position: absolute;
+    margin: 30px 10px;
 }
 
-.float{
+.left-container-title h1 {
+    font-family: 'Bright';
+    color: #d425c8ba;
+    font-size: 50px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+.float {
     position: fixed;
     height: 10vh;
     width: auto;
-bottom: 3vh;
-right: 3vh;
+    bottom: 3vh;
+    right: 3vh;
 }
-.float img{
+
+.float img {
     object-fit: cover;
     height: inherit;
     width: inherit;
