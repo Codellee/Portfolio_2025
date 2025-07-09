@@ -48,6 +48,15 @@
     }
 }
 
+@keyframes scroll{
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -195,6 +204,7 @@ body {
     width: auto;
     bottom: 3vh;
     right: 3vh;
+    z-index: 1;
 }
 
 .float img {
@@ -202,6 +212,8 @@ body {
     height: inherit;
     width: inherit;
     transform: scaleX(-1);
+    z-index: 1;
+    cursor: pointer;
 }
 
 /***SECOND SECTION****/
@@ -211,11 +223,12 @@ body {
     margin-top: 5vh;
     justify-items: start;
     align-content: center;
+    background: transparent;
 }
 
 .second-section {
     height: 50vh;
-    width: 95vw;
+    width: 100vw;
     justify-self: center;
 }
 
@@ -229,31 +242,53 @@ body {
 /**SLIDER SECOND SECTION**/
 
 .slider-container {
-    width: 95vw;
-    height: 50vh;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    padding: 0px 2em;
 }
 
 .mySlides {
     width: 95vw;
-    height: 50vh;
-    display: none;
+    height: 55vh;
+    padding: 2em 0;
+    animation: scroll 5s linear infinite;
+    
+}
+
+.slider-container:hover .mySlides{
+    animation-play-state: paused;
 }
 
 .mySlides img {
-    vertical-align: middle;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    height: 50vh;
+    width: 20vw;
+    object-fit: cover;
+    border-radius: 7px;
+    cursor: pointer;
+    opacity: 0.6;
+    margin: 0px 5px;
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.mySlides img:hover {
+    opacity: 1;
+    height: 50vh;
+    width: 20vw;
+    object-fit: cover;
+    border-radius: 7px;
+    transform: scale(1.1);
+    transition: .3s;
+    margin: 0px 13px;
+    z-index: 1;
+    box-shadow: 2px 2px 7px #0000002c;
+    filter: drop-shadow(1px 1px 10px #0000002c);
+}
+
+.expandable-container {
+    position: relative;
+    display: none;
 }
 
 .active {
