@@ -64,45 +64,27 @@
     <div class="second-section">
         <div class="slider-container" id="slider">
             <div class="mySlides">
-                <img src="images/carousel (1).jpg" alt="" onclick="myFunction(this);">
+                <img onclick="openModal();currentSlider(1)" src="images/carousel (1).jpg" alt="" onclick="myFunction(this);">
             </div>
             <div class="mySlides">
-                <img src="images/carousel (2).jpg" alt="" onclick="myFunction(this);">
+                <img onclick="openModal();currentSlider(2)" src="images/carousel (2).jpg" alt="" onclick="myFunction(this);">
             </div>
             <div class="mySlides">
-                <img src="images/carousel (3).jpg" alt="" onclick="myFunction(this);">
+                <img onclick="openModal();currentSlider(3)" src="images/carousel (3).jpg" alt="" onclick="myFunction(this);">
             </div>
             <div class="mySlides">
-                <img src="images/carousel (4).jpg" alt="" onclick="myFunction(this);">
+                <img onclick="openModal();currentSlider(4)" src="images/carousel (4).jpg" alt="" onclick="myFunction(this);">
             </div>
             <div class="mySlides">
-                <img src="images/carousel (5).jpg" alt="" onclick="myFunction(this);">
-            </div>
-
-            
-             <div class="mySlides">
-                <img src="images/carousel (1).jpg" alt="" onclick="myFunction(this);">
-            </div>
-            <div class="mySlides">
-                <img src="images/carousel (2).jpg" alt="" onclick="myFunction(this);">
-            </div>
-            <div class="mySlides">
-                <img src="images/carousel (3).jpg" alt="" onclick="myFunction(this);">
-            </div>
-            <div class="mySlides">
-                <img src="images/carousel (4).jpg" alt="" onclick="myFunction(this);">
-            </div>
-            <div class="mySlides">
-                <img src="images/carousel (5).jpg" alt="" onclick="myFunction(this);">
-            </div>
-
-            <div class="expandable-container">
-                <span></span>
-
-                <img id="expandedImg">
+                <img onclick="openModal();currentSlider(5)" src="images/carousel (5).jpg" alt="" onclick="myFunction(this);">
             </div>
         </div>
-<div style="margin-top: 30px; background: #000; width: 100vw; height: 10vh;"></div>
+
+        <div class="modal" id="myModal">
+            <span class="close">&times;</span>
+            <img id="expandableImg">
+        </div>
+
 
     </div>
 

@@ -48,12 +48,23 @@
     }
 }
 
-@keyframes scroll{
+@keyframes scroll {
     0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
     }
 }
 
@@ -149,9 +160,9 @@ body {
 }
 
 .cardImage {
-    height: 100%;
+    height: 71vh;
     width: 100%;
-    max-height: 120vh;
+    margin-top: 5vh;
     align-self: center;
     object-fit: contain;
 }
@@ -186,7 +197,7 @@ body {
 .left-image-container {
     height: 20vh;
     justify-self: end;
-    transform: translateX(-10px);
+    transform: translateX(-20px);
     position: absolute;
 }
 
@@ -194,7 +205,7 @@ body {
     object-fit: contain;
     height: 20vh;
     width: auto;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
 
 }
 
@@ -255,10 +266,10 @@ body {
     height: 55vh;
     padding: 2em 0;
     animation: scroll 5s linear infinite;
-    
+
 }
 
-.slider-container:hover .mySlides{
+.slider-container:hover .mySlides {
     animation-play-state: paused;
 }
 
@@ -268,7 +279,7 @@ body {
     object-fit: cover;
     border-radius: 7px;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.8;
     margin: 0px 5px;
 }
 
@@ -286,11 +297,55 @@ body {
     filter: drop-shadow(1px 1px 10px #0000002c);
 }
 
-.expandable-container {
-    position: relative;
-    display: none;
-}
-
 .active {
     background-color: #717171;
+}
+
+.expandable-container {
+    display: none;
+    width: 70vw;
+    height: 90vh;
+    position: relative;
+    justify-self: center;
+}
+
+#expandableImg {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
