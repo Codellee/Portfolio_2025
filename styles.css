@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.separator{
+    box-shadow: 0 2px 2px -2px rgb(128, 128, 128);
+    justify-self: center;
+}
+
 @font-face {
     font-family: 'Barbie-font';
     src: url('fonts/Barbie.otf') format('opentype');
@@ -229,12 +234,13 @@ body {
 
 /***SECOND SECTION****/
 .second-section-title {
-    width: 100vw;
+    width: 90vw;
     height: 10vh;
     margin-top: 5vh;
     justify-items: start;
     align-content: center;
-    background: transparent;
+    justify-self: center;
+    box-shadow: 0 2px 2px -2px rgb(128, 128, 128);
 }
 
 .second-section {
@@ -246,7 +252,6 @@ body {
 .second-section-title h1 {
     font-family: 'Bright';
     font-size: 2em;
-    transform: translateX(50px);
     color: #d425c8ba;
 }
 
@@ -380,4 +385,41 @@ body {
     color: #999;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*THIRD SECTION*/
+.third-section {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    margin: 10em 0;
+    grid-template-columns: repeat(3, auto);
+    gap: 3em;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-food,
+.card-personality,
+.card-hobby {
+    width: 25vw;
+    height: 63vh;
+    border-radius: 15px;
+    filter: drop-shadow(1px 1px 5px #0000006b);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.card-food:hover,
+.card-personality:hover,
+.card-hobby:hover {
+transform: scale(1.03);
+transition: 0.5s;
+filter: drop-shadow(1px 1px 20px #0000003e);
+}
+.card-food:hover{
+    background-color: rgb(255, 240, 129);
+}
+.card-personality:hover{
+    
 }

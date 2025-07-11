@@ -19,7 +19,7 @@
         </div>
         <div class="right-nav-items">
             <li class="nav-first-item">
-                <a href="#">PICTURES</a>
+                <a href="#second-section">PICTURES</a>
             </li>
             <li class="nav-snd-item">
                 <a href="#">ABOUT HER</a>
@@ -61,7 +61,7 @@
         <h1>PICTURES</h1>
     </div>
 
-    <div class="second-section">
+    <div class="second-section" id="second-section">
         <div class="slider-container" id="slider">
             <div class="mySlides">
                 <img onclick="openModal();currentSlider(1)" src="images/carousel (1).jpg" alt="">
@@ -79,10 +79,13 @@
                 <img onclick="openModal();currentSlider(5)" src="images/carousel (5).jpg" alt="">
             </div>
         </div>
+
+        <div class="separator" style="height: 10px; width: 90vw;"></div>
     </div>
+
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="modalClose()">&times;</span>
-        <div  class="modal-content">
+        <div class="modal-content">
             <div class="myModalSlides">
                 <img src="images/carousel (1).jpg" alt="">
             </div>
@@ -106,7 +109,18 @@
         </div>
     </div>
 
+    <div class="third-section">
+        <div class="card-food">
 
+        </div>
+        <div class="card-hobby">
+
+        </div>
+        <div class="card-personality">
+
+        </div>
+    </div>
+    
 
 
     <script src="action.js"></script>
