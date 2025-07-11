@@ -1,15 +1,3 @@
-function myFunction(imgs) {
-    var modal = document.getElementById("myModal");
-    modal.src = imgs.src;
-    modal.parentElement.style.display = "block";
-
-    var span = document.getElementsByClassName("close")[0];
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-}
-
 const carousel = document.getElementsById("slider");
 let scrollSpeed = 1;
 
@@ -22,3 +10,34 @@ function autoScroll() {
     requestAnimationFrame(autoScroll);
 }
 autoScroll();
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function modalClose() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlider(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("myModalSlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
